@@ -1,0 +1,19 @@
+# Désactivation du listing des dossiers
+Options -Indexes
+
+# Vérifications que le module de réécriture est bien activé
+<IfModule mod_rewrite.c>
+
+    # Désactivation de la négociation des contenus
+    Options -Multiviews
+
+    # Activation de la réécriture d'URL
+    RewriteEngine On
+
+    # Conditions qui vont empêcher la redirection sur index.php si l'URL demandée pointe sur un dossier ou un fichier réellement existant
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Redirection de toutes les requêtes sur index.php
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
