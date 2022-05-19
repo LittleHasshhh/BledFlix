@@ -1,6 +1,5 @@
 <?php
-
-require_once 'db.php';
+require_once __DIR__.'../../repository/usersRepo.php';
 require_once __DIR__.'../../Entity/users.php';
 
 class usersControls {
@@ -17,13 +16,11 @@ class usersControls {
             // 1 recup de donnée du formulair et netoyage
             $mail = htmlspecialchars(strip_tags($_POST['email']));
             $pass = htmlspecialchars(strip_tags($_POST['password']));
-        
-            // 2 verif si mail exixte en BDD
-            $query = $this->getDb()->prepare('SELECT * FROM users WHERE mail = :mail');
-            $query->bindValue(':mail', $mail);
-            $query->execute();
-        
-            $user = $query->fetch();
+
+            $repo = new usersRepo();
+
+            $user = $repo->chechUser($mail);
+           
             // 2.1 si oui on verifie
             if ($user) {
                 // 3 si MDP et correct ouverture de $_SESSION(3.1 en haut de page)
