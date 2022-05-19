@@ -5,9 +5,7 @@ require_once __DIR__.'../../Entity/users.php';
 class usersControls {
 
     public function login(){
-        if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "ROLE_ADMIN") {
-            $test = "<a href='/main'>HOME PAGE</a>";
-        }elseif (isset($_SESSION['user'])) {
+        if (isset($_SESSION['user'])) {
             header('Location: /main');
         }
         // Si lutilisateur envoie le formulaire
@@ -25,6 +23,7 @@ class usersControls {
             if ($user) {
                 // 3 si MDP et correct ouverture de $_SESSION(3.1 en haut de page)
                 if (password_verify($pass, $user['password'])) {
+                    echo $user['password'];
                     //3.2 enregistre les donner dans une session
                     $_SESSION['user'] = [
                         'id' => $user['id'],

@@ -16,8 +16,6 @@
             <img src="images/netflixLogo.png" alt="Logo Netflix">
             </a>
         </nav>
-        <?php if ($test){echo $test;}
-        ?>
     </header>
     <div class="tqt">
         <form action="" method="POST">
