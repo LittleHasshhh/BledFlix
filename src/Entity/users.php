@@ -62,5 +62,3 @@ class user {
         return $this;
     }
 }
-
-
