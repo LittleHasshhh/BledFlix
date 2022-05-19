@@ -31,7 +31,7 @@
                                 <?php foreach ($list as $cate) {
                                     echo "<li><a class='dropdown-item' href='/categorie?id={$cate->getId()}'>{$cate->getNom()}</a></li>";
                                 } ?>
-                                
+                                <u></u>
                             </ul>
                         </li>
                     </ul>
