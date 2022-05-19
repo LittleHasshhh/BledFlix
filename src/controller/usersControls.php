@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.'../../repository/usersRepo.php';
 require_once __DIR__.'../../Entity/users.php';
+require_once __DIR__.'../../repository/cateRepo.php';
 
 class usersControls {
 
@@ -93,6 +94,8 @@ class usersControls {
     }
 
     public function mainPage(){
+        $allAvis = new cateRepo();
+        $list = $allAvis->allCategorie();
         require_once __DIR__. '../../../templates/main.php';
     }
 

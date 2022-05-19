@@ -1,9 +1,11 @@
 .lien{
     display: flex!important;
     justify-content: space-between !important;
-    align-items: center;
-    padding-top: 20px !important;
-    padding-bottom: 10px  !important;
+    align-items: baseline !important;
+    padding-top: 10px !important;
+    background-color: #000 !important;
+    position: fixed !important;
+    width: 100vw;
 
 }
 
@@ -14,21 +16,29 @@
 
 .space{
     width: 30% !important; 
-    padding-left: 100px !important;
+    margin-left: 100px !important;
 }
 
 .navbar-brand {
-    padding-left: 200px !important;
+    margin-left: 50px !important;
 }
 
 .compte {
-    padding-left: 600px;
+    margin-left: 600px;
 }
 nav img{
     width: 150px;
     margin-left: 40px;
 }
 
+input{
+    height: 35px;
+    background-color: lightgray !important;
+}
+
+span{
+    height: 35px;
+}
 /**
 * bande annonce + carousel
 */

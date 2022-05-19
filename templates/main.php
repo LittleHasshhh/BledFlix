@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark lien">
+        <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
                 <a href="index.php">
                     <img src="images/netflixLogo.png" alt="Logo Netflix">
@@ -28,15 +28,10 @@
                                 CATEGORIES
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Science Fiction</a></li>
-                                <li><a class="dropdown-item" href="#">Emotion</a></li>
-                                <li><a class="dropdown-item" href="#">Jeunesse</a></li>
-                                <li><a class="dropdown-item" href="#">Comedie</a></li>
-                                <li><a class="dropdown-item" href="#">Documentaire</a></li>
-                                <li><a class="dropdown-item" href="#">Drame</a></li>
-                                <li><a class="dropdown-item" href="#">Policier</a></li>
-                                <li><a class="dropdown-item" href="#">Horreur</a></li>
+                                <?php foreach ($list as $cate) {
+                                    echo "<li><a class='dropdown-item' href='/categorie?id={$cate->getId()}'>{$cate->getNom()}</a></li>";
+                                } ?>
+                                
                             </ul>
                         </li>
                     </ul>
@@ -62,9 +57,9 @@
             </div>
         </nav>
          <!-- HEADER -->
-        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" class="abso">
             <source src="images/bande_annonce.mov">
-            <div>
+            <div class="relat">
                 <h2>Titre du film</h2>
                 <a href="#"><img src="images/play.svg" alt="play">Lecture</a>
                 <a href="#">Plus d'info</a>

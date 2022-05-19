@@ -1,6 +1,7 @@
 <?php
 
 require_once '../src/controller/usersControls.php';
+require_once '../src/controller/cateControls.php';
 
 
 switch ($uri) {
@@ -19,10 +20,6 @@ switch ($uri) {
     case "/logOut":
         $controller = new usersControls();
         $controller->logOut();
-    case "/categorie":
-        $controller = new usersControls();
-        $controller->catePage();
-        break;
     default:
         //$controller = new errorControls();
         //$controller->error404();

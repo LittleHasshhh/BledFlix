@@ -10,9 +10,9 @@ class cateRepo extends Db {
         $all = $query->fetchAll();
 
         foreach ($all as $cate) {
-            $avisObject = new user();
-            $avisObject->getId();
-            $avisObject->getNom();
+            $avisObject = new categorie();
+            $avisObject->setId($cate['id']);
+            $avisObject->setNom($cate['nom']);
             $tab[] = $avisObject;
         }
         return $tab ?? [];
