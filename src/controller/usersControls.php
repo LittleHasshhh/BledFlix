@@ -5,9 +5,7 @@ require_once __DIR__.'../../Entity/users.php';
 class usersControls {
 
     public function login(){
-        if ($_SESSION['user']['role'] === "ROLE_ADMIN") {
-            $test = "<a href='/main'>HOME PAGE</a>";
-        }elseif (isset($_SESSION['user'])) {
+        if (isset($_SESSION['user'])) {
             header('Location: /main');
         }
         // Si lutilisateur envoie le formulaire
