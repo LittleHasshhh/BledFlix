@@ -9,8 +9,6 @@ class usersControls {
             $test = "<a href='/main'>HOME PAGE</a>";
         }elseif (isset($_SESSION['user'])) {
             header('Location: /main');
-        }else {
-            header('Location: /');
         }
         // Si lutilisateur envoie le formulaire
         
