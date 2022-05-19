@@ -20,7 +20,7 @@
                 <a href="index.php">
                     <img src="images/netflixLogo.png" alt="Logo Netflix">
                 </a>
-                <a class="navbar-brand " href="#">Menu</a>
+                <a class="navbar-brand " href="#">acceuil</a>
                 <div class="collapse navbar-collapse " id="navbarNavDarkDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
