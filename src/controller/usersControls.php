@@ -9,7 +9,6 @@ class usersControls {
             header('Location: /main');
         }
         // Si lutilisateur envoie le formulaire
-        $oui = null ;
         $error = null;
 
         if (!empty($_POST)) {
@@ -23,7 +22,6 @@ class usersControls {
             if ($user) {
                 // 3 si MDP et correct ouverture de $_SESSION(3.1 en haut de page)
                 if (password_verify($pass, $user['password'])) {
-                    echo $user['password'];
                     //3.2 enregistre les donner dans une session
                     $_SESSION['user'] = [
                         'id' => $user['id'],
@@ -50,17 +48,58 @@ class usersControls {
     }
 
     public function create(){
+        if (isset($_SESSION['user'])) {
+            header('Location: /main');
+        }
         if (!empty($_POST)){
-            $mail = htmlspecialchars(strip_tags($_POST['email']));
-            $pass = htmlspecialchars(strip_tags($_POST['password']));
-            $pass2 = htmlspecialchars(strip_tags($_POST['confPass']));
-            $nom = htmlspecialchars(strip_tags($_POST['nom']));
-            $prenom = htmlspecialchars(strip_tags($_POST['prenom']));
+            if (!empty($_POST['password']) && !empty($_POST['confPass']) && !empty($_POST['email']) && !empty($_POST['nom']) && !empty($_POST['prenom'])) {
+                if ($_POST['password'] === $_POST['confPass']) {
+                    $mail = htmlspecialchars(strip_tags($_POST['email']));
+                    $pass = htmlspecialchars(strip_tags($_POST['password']));
+                    $nom = htmlspecialchars(strip_tags($_POST['nom']));
+                    $prenom = htmlspecialchars(strip_tags($_POST['prenom']));
+
+                    $pass = password_hash($pass, PASSWORD_ARGON2I);
+
+                    $user = new user();
+                    $user->setNom($nom);
+                    $user->setPrenom($prenom);
+                    $user->setPassword($pass);
+                    $user->setMail($mail);
+
+                    $userRep = new usersRepo();
+
+                    $userRep->createUser($user);
+
+                    header('Location: /');
+
+                }else {
+                    $error = "Les Mot de passe ne corespond pas ";
+                }
+            }else {
+                $error = "Il faut remplir tous les champs";
+            }
+
         }
         require_once __DIR__. '../../../templates/create.php';
     }
 
     public function mainPage(){
         require_once __DIR__. '../../../templates/main.php';
+    }
+
+    public function logOut(){
+        session_start();
+        //deconnexion
+
+        // unset detruit une variable preciser
+        // unset($_SESSION['user']);
+
+        // detruit toute les variable de la session
+        session_unset();
+
+        session_destroy();
+
+        header('Location: /');
     }
 }

@@ -25,6 +25,7 @@
             <input type="password" name="password" placeholder="Mot de passe">
             <input type="password" name="confPass" placeholder="Mot de passe">
             <input type="submit" value="Connexion">
+            <?php if (isset($error)){echo $error;}?>
             <div>
                 <a class="none lien" href="" >
                     <img class="imgFB" src="images/téléchargement.png" alt="FaceBook connexion">

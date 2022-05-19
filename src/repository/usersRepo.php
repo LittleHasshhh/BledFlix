@@ -20,7 +20,7 @@ class usersRepo extends Db {
             $query->bindValue(':nom', $user->getNom());
             $query->bindValue(':mail', $user->getMail());
             $query->bindValue(':password', $user->getPassword());
-            $query->bindValue(':role', $user->getRole());
+            $query->bindValue(':role', "ROLE_USER");
 
         } catch (Exception $exe) {
             die("error on insertion {$exe->getMessage()}");

@@ -16,6 +16,10 @@ switch ($uri) {
         $controller = new usersControls();
         $controller->mainPage();
         break;
+    case "/logOut":
+        $controller = new usersControls();
+        $controller->logOut();
+        break;
     default:
         //$controller = new errorControls();
         //$controller->error404();
