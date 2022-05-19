@@ -110,4 +110,8 @@ class usersControls {
 
         header('Location: /');
     }
+
+    public function catePage() {
+        require_once __DIR__. '../../../templates/.php';
+    }
 }

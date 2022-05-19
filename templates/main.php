@@ -28,29 +28,29 @@
                                 CATEGORIES
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Science Fiction</a></li>
-                                <li><a class="dropdown-item" href="#">Emotion</a></li>
-                                <li><a class="dropdown-item" href="#">Jeunesse</a></li>
-                                <li><a class="dropdown-item" href="#">Comedie</a></li>
-                                <li><a class="dropdown-item" href="#">Documentaire</a></li>
-                                <li><a class="dropdown-item" href="#">Drame</a></li>
-                                <li><a class="dropdown-item" href="#">Policier</a></li>
-                                <li><a class="dropdown-item" href="#">Horreur</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Action</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Science Fiction</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Emotion</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Jeunesse</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Comedie</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Documentaire</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Drame</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Policier</a></li>
+                                <li><a class="dropdown-item" href="/categorie?id=<?php echo $cate->getId(); ?>">Horreur</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="input-group mb-3 space">
-                <span class="input-group-text" id="inputGroup-sizing-default">Recherche</span>
+                <p class="input-group-text" id="inputGroup-sizing-default">Recherche</p>
                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
             <div class="collapse navbar-collapse compte " id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Utilisateur
+                            Utilisateur
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Compte</a></li>
