@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark lien">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark lien">
             <div class="flex ">
                 <a href="index.php">
                     <img src="images/netflixLogo.png" alt="Logo Netflix">
@@ -57,9 +57,9 @@
             </div>
         </nav>
          <!-- HEADER -->
-        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" class="abso">
+        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
             <source src="images/bande_annonce.mov">
-            <div class="relat">
+            <div>
                 <h2>Titre du film</h2>
                 <a href="#"><img src="images/play.svg" alt="play">Lecture</a>
                 <a href="#">Plus d'info</a>
