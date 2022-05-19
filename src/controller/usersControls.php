@@ -9,7 +9,7 @@ class usersControls {
             header('Location: /main');
         }
         // Si lutilisateur envoie le formulaire
-        
+        $oui = null ;
         $error = null;
 
         if (!empty($_POST)) {
