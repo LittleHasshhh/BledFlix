@@ -6,6 +6,7 @@
     background-color: #000 !important;
     position: fixed !important;
     width: 100vw;
+    z-index: 90000000;
 
 }
 

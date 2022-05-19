@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark lien">
+        <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
                 <a href="index.php">
                     <img src="images/netflixLogo.png" alt="Logo Netflix">
@@ -50,7 +50,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Compte</a></li>
                             <li><a class="dropdown-item" href="#">Centre d'aide</a></li>
-                            <li><a class="dropdown-item" href="#">deconnecté</a></li>
+                            <li><a class="dropdown-item" href="/logOut">deconnecté</a></li>
                         </ul>
                     </li>
                 </ul>
