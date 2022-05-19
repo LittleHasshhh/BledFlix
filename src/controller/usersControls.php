@@ -10,7 +10,7 @@ class usersControls {
         }elseif (isset($_SESSION['user'])) {
             header('Location: /main');
         }else {
-            header('Location: /main');
+            header('Location: /');
         }
         // Si lutilisateur envoie le formulaire
         
