@@ -7,13 +7,13 @@
     <title>BledFlix</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="css/homeStyle.css">
 </head>
 <body class="homePage">
     <header>
         <nav>
             <a href="index.php">
-            <img src="images/netflixLogo.png" alt="Logo Netflix">
+                <img src="images/netflixLogo.png" alt="Logo Netflix">
             </a>
         </nav>
     </header>

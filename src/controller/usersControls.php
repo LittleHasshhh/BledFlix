@@ -69,9 +69,17 @@ class usersControls {
 
                     $userRep = new usersRepo();
 
-                    $userRep->createUser($user);
+                    $id = $userRep->createUser($user);
+                    
 
-                    header('Location: /');
+                    $_SESSION['user'] = [
+                        'id' => $id,
+                        'prenom' => $user->getPrenom(),
+                        'nom' => $user->getNom(),
+                        'email' => $user->getMail()
+                    ];
+
+                    header('Location: /main');
 
                 }else {
                     $error = "Les Mot de passe ne corespond pas ";

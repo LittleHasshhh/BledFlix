@@ -21,10 +21,11 @@ class usersRepo extends Db {
             $query->bindValue(':mail', $user->getMail());
             $query->bindValue(':password', $user->getPassword());
             $query->bindValue(':role', "ROLE_USER");
+            $query->execute();
 
         } catch (Exception $exe) {
             die("error on insertion {$exe->getMessage()}");
         }
-        return $query->execute();
+        return $this->getDb()->lastInsertId();
     }
 }
