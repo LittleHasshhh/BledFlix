@@ -19,6 +19,9 @@ switch ($uri) {
     case "/logOut":
         $controller = new usersControls();
         $controller->logOut();
+    case "/categorie":
+        $controller = new usersControls();
+        $controller->catePage();
         break;
     default:
         //$controller = new errorControls();
