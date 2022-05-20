@@ -28,4 +28,5 @@ class usersRepo extends Db {
         }
         return $this->getDb()->lastInsertId();
     }
+
 }
