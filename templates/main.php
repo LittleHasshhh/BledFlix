@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
-                <a href="index.php">
+                <a href="/main">
                     <img src="images/bledflix.png" alt="Logo bledflix">
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
