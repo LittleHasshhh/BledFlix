@@ -50,7 +50,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Compte</a></li>
                             <?php echo $admin;?>
-                            <li><a class="dropdown-item" href="/logOut">deconnecté</a></li>
+                            <li><a class="dropdown-item" href="/logOut">Deconnecté</a></li>
                         </ul>
                     </li>
                 </ul>
