@@ -42,4 +42,14 @@ class cateRepo extends Db
         }
         return $tab ?? [];
     }
+
+
+    public function editfilm(int $id)
+    {
+        $query = $this->getDb()->prepare('SELECT id, Titre, description, date, auteur, duree, auteur, affiche, lien_film, categorie_id FROM film WHERE id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+
+        return $query->execute();
+
+    }
 }

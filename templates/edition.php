@@ -32,8 +32,6 @@
             <form action="" method="post">
                 <label for="">Titre</label>
                 <input type="text">
-                <label for="">Description</label>
-                <input type="text">
                 <label for="">Auteur</label>
                 <input type="text">
                 <label for="">Durée</label>
@@ -50,6 +48,8 @@
                 <input type="text">
                 <label for="">Film</label>
                 <input type="text">
+                <label for="">Description</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
                 <button type="submit">Valider</button>
             </form>
         </div>
