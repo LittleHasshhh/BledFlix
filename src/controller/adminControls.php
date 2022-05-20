@@ -8,4 +8,8 @@ class adminControls {
         }
         require_once __DIR__. '../../../templates/admin.php';
     }
+
+    public function add() {
+        require_once __DIR__. '../../../templates/add.php';
+    } 
 }

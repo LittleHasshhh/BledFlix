@@ -27,6 +27,10 @@ switch ($uri) {
         $controller = new adminControls();
         $controller->admin();
         break;
+    case "/add":
+        $controller = new adminControls();
+        $controller->add();
+        break;
     default:
         $controller = new errorControls();
         $controller->error404();
