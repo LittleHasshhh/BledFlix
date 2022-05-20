@@ -20,9 +20,9 @@
                 <a href="/main">
                     <img src="images/bledflix.png" alt="Logo bledflix">
                 </a>
-                <a class="navbar-brand " href="/main">acceuil</a>
-                <a class="navbar-brand " href="/add">ajouter un film</a>
-                <a class="navbar-brand " href="/admin">Liste Films</a>
+                <a class="navbar-brand " href="/main">Acceuil</a>
+                <a class="navbar-brand " href="/add">Ajouter un film</a>
+                <a class="navbar-brand " href="/admin">Liste films</a>
             </div>
         </nav>
     </header>
