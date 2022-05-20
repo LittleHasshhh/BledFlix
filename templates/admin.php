@@ -21,7 +21,6 @@
                     <img src="images/bledflix.png" alt="Logo Netflix" class="logo">
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
-                <a class="navbar-brand " href="/edite">editer un film</a>
                 <a class="navbar-brand " href="/add">ajouter un film</a>
             </div>
         </nav>
@@ -42,15 +41,20 @@
             <tbody>
                 <?php
                     foreach ($allFilms as $key) {
-                        $lien = substr($key->getLienfiche(), 0, 30);
+                        $desc = substr($key->getDescription(), 0, 150);
                         echo "<tr>
                                 <td class='id'>{$key->getId()}</td>
                                 <td>{$key->getTitre()}</td>
                                 <td>{$key->getAuteur()}</td>
                                 <td><img class='imgFilm' src='{$key->getAffiche()}'></img></td>
-                                <td>{$key->getDescription()}</td>
-                                <td>{$key->getDate()}</td>
-                                <td>{$lien}</td>
+                                <td>{$desc}</td>
+                                <td class='date'>{$key->getDate()}</td>
+                                <td class='id'>
+                                    <div class='flex'>
+                                        <a href='/edite' class='href edit'>Editer</a>
+                                        <a href='/sup' class='href sup'>supprimer</a>
+                                    </div>
+                                </td>
                               </tr>";
                     }
                 ?>
