@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
                 <a href="/main">
-                    <img src="images/bledflix.png" alt="Logo bledflix">
+                    <img src="images/bledflix.png" alt="Logo bledflix" class="logo">
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
                 <div class="collapse navbar-collapse " id="navbarNavDarkDropdown">
@@ -45,7 +45,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Utilisateur
+                        <?php echo $admin2;?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Compte</a></li>

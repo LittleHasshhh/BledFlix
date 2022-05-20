@@ -36,7 +36,7 @@ class cateRepo extends Db
             $avisObject->setDate($allFilms['date']);
             $avisObject->setAuteur($allFilms['auteur']);
             $avisObject->setDuree($allFilms['duree']);
-            $avisObject->setAffiche($allFilms['affiche']);
+            $avisObject->setAffiche($allFilms['affiche'] ?? "images/vide.png");
             $avisObject->setLienfiche($allFilms['lien_film']);
             $tab[] = $avisObject;
         }

@@ -13,8 +13,8 @@
 <body class="homePage">
     <header>
         <nav>
-            <a href="index.php">
-                <img src="images/netflixLogo.png" alt="Logo Netflix">
+            <a href="/">
+                <img src="images/bledflix.png" alt="Logo Netflix" class="logo">
             </a>
         </nav>
     </header>

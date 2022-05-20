@@ -125,7 +125,32 @@ h1 {
     right: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 }
-
+main {
+    padding-top: 100px !important;
+    color: whitesmoke !important;
+    width: 80% !important;
+    margin: auto !important;
+}
+.imgFilm{
+    height: 150px !important;
+    width: 150px;
+}
+table, thead, tbody, tr {
+    border: 1px solid whitesmoke !important;
+    text-align: center !important;
+}
+.id {
+    padding: 0px 10px 0 10px !important;
+    border: 1px solid whitesmoke !important;
+}
+tbody tr {
+    margin-bottom: 20px !important;
+}
+.logo {
+    height: 50px !important;
+    width: 220px !important;
+    margin: 0 !important;
+}
 @media only screen and (max-width: 600px) {
     a.arrow__btn {
         display: none;
