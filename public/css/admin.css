@@ -177,6 +177,9 @@ tbody tr {
 .date {
     width: 120px !important;
 }
+tr {
+    margin-bottom: 20px !important;
+}
 @media only screen and (max-width: 600px) {
     a.arrow__btn {
         display: none;

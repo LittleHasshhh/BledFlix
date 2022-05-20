@@ -27,26 +27,14 @@
     </header>
     <main>
         <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nom</th>
-                    <th>Auteur</th>
-                    <th>Image</th>
-                    <th>Description</th>
-                    <th>Sortie</th>
-                    <th>Lien Film</th>
-                </tr>
-            </thead>
             <tbody>
                 <?php
                     foreach ($allFilms as $key) {
                         $desc = substr($key->getDescription(), 0, 150);
                         echo "<tr>
-                                <td class='id'>{$key->getId()}</td>
+                                <td><img class='imgFilm' src='{$key->getAffiche()}'></img></td>
                                 <td>{$key->getTitre()}</td>
                                 <td>{$key->getAuteur()}</td>
-                                <td><img class='imgFilm' src='{$key->getAffiche()}'></img></td>
                                 <td>{$desc}</td>
                                 <td class='date'>{$key->getDate()}</td>
                                 <td class='id'>
