@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bledflix</title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/edition.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -22,20 +22,39 @@
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
                 <a class="navbar-brand " href="/add">ajouter un film</a>
+                <a class="navbar-brand " href="/admin">Liste Films</a>
             </div>
         </nav>
     </header>
     <main>
-        <h1>édition</h1>
-        <form action="">
-            <label for="">Titre</label>
-            <input type="text">
-            <label for="">Description</label>
-            <label for=""></label>
-        </form>
-
+        <div class="container">
+            <h1>Edition</h1>
+            <form action="" method="post">
+                <label for="">Titre</label>
+                <input type="text">
+                <label for="">Description</label>
+                <input type="text">
+                <label for="">Auteur</label>
+                <input type="text">
+                <label for="">Durée</label>
+                <input type="text">
+                <label for="">Date</label>
+                <input type="date">
+                <label for="">Catégorie</label>
+                <select name="" id="">
+                    <?php foreach ($list AS $cates) : ?>
+                        <option value=""><?php echo $cates->getNom(); ?></option>
+                    <?php endforeach;?>
+                </select>
+                <label for="">Affiche</label>
+                <input type="text">
+                <label for="">Film</label>
+                <input type="text">
+                <button type="submit">Valider</button>
+            </form>
+        </div>
     </main>
 </body>
-</body>
+
 
 </html>
