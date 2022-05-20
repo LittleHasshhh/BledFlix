@@ -20,7 +20,7 @@
                 <a href="/main">
                     <img src="images/bledflix.png" alt="Logo bledflix" class="logo">
                 </a>
-                <a class="navbar-brand " href="/main">acceuil</a>
+                <a class="navbar-brand " href="/main">Accueil</a>
                 <div class="collapse navbar-collapse " id="navbarNavDarkDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">

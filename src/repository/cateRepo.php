@@ -52,4 +52,9 @@ class cateRepo extends Db
         return $query->execute();
 
     }
+
+    public function oneCategorie()
+    {
+        
+    }
 }
