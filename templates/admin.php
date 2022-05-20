@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
                 <a href="/main">
-                    <img src="images/netflixLogo.png" alt="Logo Netflix">
+                    <img src="images/bledflix.png" alt="Logo Netflix">
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
                 <a class="navbar-brand " href="/edit">editer un film</a>
@@ -27,7 +27,23 @@
         </nav>
     </header>
     <main>
-
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Auteur</th>
+                    <th>Image</th>
+                    <th>Categorie</th>
+                    <th>Description</th>
+                    <th>Sortie</th>
+                    <th>Lien Film</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     </main>
 </body>
 </body>

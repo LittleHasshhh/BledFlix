@@ -77,7 +77,8 @@ class usersControls {
                         'id' => $id,
                         'prenom' => $user->getPrenom(),
                         'nom' => $user->getNom(),
-                        'email' => $user->getMail()
+                        'email' => $user->getMail(),
+                        'role' => "ROLE_USER"
                     ];
 
                     header('Location: /main');
