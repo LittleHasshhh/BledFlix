@@ -99,9 +99,11 @@ class usersControls {
         $list = $allAvis->allCategorie();
         if (isset($_SESSION['user']) && $_SESSION['user']['role'] !== "ROLE_ADMIN") {
             $admin = "<li><a class='dropdown-item' href='#'>Centre d'aide</a></li>";
+            $admin2 = "mon compte";
 
         }elseif (isset($_SESSION['user']) && $_SESSION['user']['role'] === "ROLE_ADMIN"){
             $admin = "<li><a class='dropdown-item' href='/admin'>Menu Admin</a></li>";
+            $admin2 = "tableau de bord";
         }
         require_once __DIR__. '../../../templates/main.php';
     }
