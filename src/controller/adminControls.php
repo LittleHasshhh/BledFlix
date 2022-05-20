@@ -12,4 +12,8 @@ class adminControls {
     public function add() {
         require_once __DIR__. '../../../templates/add.php';
     } 
+
+    public function edit() {
+        require_once __DIR__. '../../../templates/edition.php';
+    } 
 }

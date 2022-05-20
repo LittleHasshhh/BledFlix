@@ -21,7 +21,7 @@
                     <img src="images/netflixLogo.png" alt="Logo Netflix">
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
-                <a class="navbar-brand " href="/edit">editer un film</a>
+                <a class="navbar-brand " href="/edite">editer un film</a>
                 <a class="navbar-brand " href="/add">ajouter un film</a>
             </div>
         </nav>
