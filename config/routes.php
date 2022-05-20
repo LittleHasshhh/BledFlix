@@ -22,8 +22,13 @@ switch ($uri) {
         $controller = new usersControls();
         $controller->logOut();
         break;
+    case '/main':
+        $controller = new cateControls();
+        $controller->cateList();
+        break;
     default:
         $controller = new errorControls();
         $controller->error404();
         break;
+    
 }
