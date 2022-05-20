@@ -4,14 +4,14 @@ class film {
 
 
     private int $id;
-    private $categorie;
-    private $Titre;
-    private $description;
-    private $date;
-    private $auteur;
-    private $duree;
-    private $affiche;
-    private $lienfiche;
+    private int $categorie;
+    private string $Titre;
+    private string $description;
+    private string $date;
+    private string $auteur;
+    private int $duree;
+    private string $affiche = "images/vide.png";
+    private string $lienfiche;
 
     /**
      * Get the value of id

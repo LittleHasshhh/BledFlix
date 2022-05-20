@@ -18,16 +18,48 @@
         <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
                 <a href="/main">
-                    <img src="images/netflixLogo.png" alt="Logo Netflix">
+                    <img src="images/bledflix.png" alt="Logo Netflix" class="logo">
                 </a>
-                <a class="navbar-brand " href="/main">acceuil</a>
-                <a class="navbar-brand " href="/edit">editer un film</a>
-                <a class="navbar-brand " href="/add">ajouter un film</a>
+                <a class="navbar-brand " href="/main">Acceuil</a>
+                <a class="navbar-brand " href="/add">Ajouter un film</a>
             </div>
         </nav>
     </header>
     <main>
-
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Auteur</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Sortie</th>
+                    <th>Lien Film</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach ($allFilms as $key) {
+                        $desc = substr($key->getDescription(), 0, 150);
+                        echo "<tr>
+                                <td class='id'>{$key->getId()}</td>
+                                <td>{$key->getTitre()}</td>
+                                <td>{$key->getAuteur()}</td>
+                                <td><img class='imgFilm' src='{$key->getAffiche()}'></img></td>
+                                <td>{$desc}</td>
+                                <td class='date'>{$key->getDate()}</td>
+                                <td class='id'>
+                                    <div class='flex'>
+                                        <a href='/edite' class='href edit'>Editer</a>
+                                        <a href='/sup' class='href sup'>supprimer</a>
+                                    </div>
+                                </td>
+                              </tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
     </main>
 </body>
 </body>

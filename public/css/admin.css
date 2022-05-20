@@ -125,7 +125,58 @@ h1 {
     right: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 }
-
+main {
+    padding-top: 200px !important;
+    color: whitesmoke !important;
+    width: 70% !important;
+    margin: auto !important;
+    margin-bottom: 100px!important;
+}
+.imgFilm{
+    height: 150px !important;
+    width: 150px;
+}
+table, thead, tbody, tr, th, td {
+    border-radius: 10px !important;
+}
+table, thead, tbody, tr {
+    border: 1px solid rgba(245, 245, 245, 0.842) !important;
+    text-align: center !important;
+    background-color: #000;
+}
+.id {
+    padding: 0px 10px 0 10px !important;
+    border: 1px solid whitesmoke !important;
+}
+.flex {
+    display: flex !important;
+    gap: 10px !important;
+}
+.href{
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+tbody tr {
+    margin-bottom: 20px !important;
+}
+.logo {
+    height: 50px !important;
+    width: 220px !important;
+    margin: 0 !important;
+}
+.edit {
+    padding: 5px 10px !important;
+    border: 1px solid rgb(0, 150, 0) !important;
+    border-radius: 5px !important;
+}
+.sup {
+    padding: 5px 10px !important;
+    border: 1px solid red !important;
+    border-radius: 5px !important;
+}
+.date {
+    width: 120px !important;
+}
 @media only screen and (max-width: 600px) {
     a.arrow__btn {
         display: none;
