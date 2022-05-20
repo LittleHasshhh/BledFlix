@@ -96,17 +96,18 @@ class usersControls {
     public function mainPage(){
         $allAvis = new cateRepo();
         $list = $allAvis->allCategorie();
+        if (isset($_SESSION['user']) && $_SESSION['user']['role'] !== "ROLE_ADMIN") {
+            $admin = "<li><a class='dropdown-item' href='#'>Centre d'aide</a></li>";
+
+        }elseif (isset($_SESSION['user']) && $_SESSION['user']['role'] === "ROLE_ADMIN"){
+            $admin = "<li><a class='dropdown-item' href='/admin'>Menu Admin</a></li>";
+        }
         require_once __DIR__. '../../../templates/main.php';
     }
 
     public function logOut(){
         session_start();
-        //deconnexion
 
-        // unset detruit une variable preciser
-        // unset($_SESSION['user']);
-
-        // detruit toute les variable de la session
         session_unset();
 
         session_destroy();
@@ -114,7 +115,4 @@ class usersControls {
         header('Location: /');
     }
 
-    public function catePage() {
-        require_once __DIR__. '../../../templates/.php';
-    }
 }
