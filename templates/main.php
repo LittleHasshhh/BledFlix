@@ -17,10 +17,10 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
-                <a href="index.php">
+                <a href="/main">
                     <img src="images/netflixLogo.png" alt="Logo Netflix">
                 </a>
-                <a class="navbar-brand " href="#">acceuil</a>
+                <a class="navbar-brand " href="/main">acceuil</a>
                 <div class="collapse navbar-collapse " id="navbarNavDarkDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
