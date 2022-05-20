@@ -20,7 +20,7 @@
                 <a href="index.php">
                     <img src="images/bledflix.png" alt="Logo bledflix">
                 </a>
-                <a class="navbar-brand " href="#">acceuil</a>
+                <a class="navbar-brand " href="/main">acceuil</a>
                 <div class="collapse navbar-collapse " id="navbarNavDarkDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
@@ -49,7 +49,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Compte</a></li>
-                            <li><a class="dropdown-item" href="#">Centre d'aide</a></li>
+                            <?php echo $admin;?>
                             <li><a class="dropdown-item" href="/logOut">deconnecté</a></li>
                         </ul>
                     </li>

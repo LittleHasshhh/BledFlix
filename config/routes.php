@@ -3,6 +3,7 @@
 require_once '../src/controller/usersControls.php';
 require_once '../src/controller/cateControls.php';
 require_once '../src/controller/errorControls.php';
+require_once '../src/controller/adminControls.php';
 
 
 switch ($uri) {
@@ -22,9 +23,9 @@ switch ($uri) {
         $controller = new usersControls();
         $controller->logOut();
         break;
-    case '/main':
-        $controller = new cateControls();
-        $controller->cateList();
+    case "/admin":
+        $controller = new adminControls();
+        $controller->admin();
         break;
     default:
         $controller = new errorControls();
