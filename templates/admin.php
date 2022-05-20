@@ -31,7 +31,7 @@
                 <?php
                     foreach ($allFilms as $key) {
                         $desc = substr($key->getDescription(), 0, 150);
-                        echo "<tr>
+                        echo "<tr class='flexible'>
                                 <td><img class='imgFilm' src='{$key->getAffiche()}'></img></td>
                                 <td>{$key->getTitre()}</td>
                                 <td>{$key->getAuteur()}</td>
@@ -39,8 +39,8 @@
                                 <td class='date'>{$key->getDate()}</td>
                                 <td class='id'>
                                     <div class='flex'>
-                                        <a href='/edite' class='href edit'>Editer</a>
-                                        <a href='/sup' class='href sup'>supprimer</a>
+                                        <a href='edite' class='href edit'>Editer</a>
+                                        <a href='sup?id={$key->getId()}' class='href sup'>supprimer</a>
                                     </div>
                                 </td>
                               </tr>";

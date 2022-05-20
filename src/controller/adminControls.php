@@ -9,8 +9,13 @@ class adminControls {
         }
         $cateRepo = new cateRepo();
         $allFilms = $cateRepo->films();
-        
+
         require_once __DIR__. '../../../templates/admin.php';
+    }
+    public function sup(){
+        $supAvis = new cateRepo();
+        $success = $supAvis->supprimer(htmlspecialchars(strip_tags($_GET['id'])));
+        header('Location: /admin?delete='. $success);
     }
 
     public function add() {

@@ -35,10 +35,6 @@ switch ($uri) {
         $controller = new adminControls();
         $controller->edit();
         break;
-    case "/categorie":
-        $controller = new cateControls();
-        $controller->oneCategorie();
-        break;
     default:
         $controller = new errorControls();
         $controller->error404();

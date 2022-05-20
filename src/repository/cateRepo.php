@@ -57,4 +57,11 @@ class cateRepo extends Db
     {
         
     }
+
+    public function supprimer(int $id){
+        $query = $this->getDb()->prepare('DELETE FROM avis WHERE id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+
+        return $query->execute();
+    }
 }

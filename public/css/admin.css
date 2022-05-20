@@ -136,17 +136,20 @@ main {
     height: 150px !important;
     width: 150px;
 }
-table, thead, tbody, tr, th, td {
-    border-radius: 10px !important;
+td {
+    margin-bottom: 20px !important;
+}
+tr {
+    padding: 20px !important;
+    background-color: #000 !important;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 table, thead, tbody, tr {
-    border: 1px solid rgba(245, 245, 245, 0.842) !important;
     text-align: center !important;
-    background-color: #000;
 }
 .id {
     padding: 0px 10px 0 10px !important;
-    border: 1px solid whitesmoke !important;
 }
 .flex {
     display: flex !important;
@@ -157,7 +160,7 @@ table, thead, tbody, tr {
     color: whitesmoke !important;
 }
 tbody tr {
-    margin-bottom: 20px !important;
+    margin-bottom: 120px !important;
 }
 .logo {
     height: 50px !important;
@@ -177,8 +180,11 @@ tbody tr {
 .date {
     width: 120px !important;
 }
-tr {
-    margin-bottom: 20px !important;
+.flexible {
+    display: flex !important;
+    align-items: center;
+    gap: 20px !important;
+    
 }
 @media only screen and (max-width: 600px) {
     a.arrow__btn {
