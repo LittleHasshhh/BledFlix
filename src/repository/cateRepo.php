@@ -23,11 +23,8 @@ class cateRepo extends Db
 
     public function films()
     {
-        $query = $this->getDb()->prepare('SELECT film.id, film.Titre, film.description, film.date, film.auteur, film.duree, film.auteur, film.affiche, film.lien_film, film.categorie_id FROM film');
-        $query->bindValue(':id',PDO::PARAM_INT);
+        $query = $this->getDb()->query('SELECT film.id, film.Titre, film.description, film.date, film.auteur, film.duree, film.auteur, film.affiche, film.lien_film, film.categorie_id FROM film');
         $all = $query->fetchAll();
-
-        $query->execute();
 
         foreach ($all as $allFilms) {
 
