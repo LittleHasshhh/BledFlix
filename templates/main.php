@@ -59,12 +59,14 @@
          <!-- HEADER -->
         <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
             <source src="images/bande_annonce.mov">
-            <div>
-                <h2>Titre du film</h2>
-                <a href="#"><img src="images/play.svg" alt="play">Lecture</a>
-                <a href="#">Plus d'info</a>
-            </div>
         </video>
+        <div class="title">
+            <h2>N° 1 des films en France</h2>
+            <div class="titleA">
+                <a href="#" class="lien1" ><img src="images/play.svg" alt="play">Lecture</a>
+                <a href="#" class="lien2" >Plus d'info</a>
+            </div>
+        </div>
     </header>
 
     <!-- Carrousel -->

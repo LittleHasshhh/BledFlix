@@ -46,16 +46,37 @@ class cateRepo extends Db
 
     public function editfilm(int $id)
     {
-        $query = $this->getDb()->prepare('SELECT id, Titre, description, date, auteur, duree, auteur, affiche, lien_film, categorie_id FROM film WHERE id = :id');
+        $query = $this->getDb()->prepare('SELECT id, Titre, description, date, auteur, duree, auteur, affiche, lien_film FROM film WHERE id = :id');
         $query->bindValue(':id', $id, PDO::PARAM_INT);
 
         return $query->execute();
 
     }
 
-    public function oneCategorie()
+    public function oneForAll(int $id)
     {
-        
+        $query = $this->getDb()->prepare('SELECT * FROM film WHERE categorie_id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+
+        $all = $query->fetchAll();
+
+        foreach ($all as $allFilms) {
+
+            $avisObject = new category();
+            $avisObject->setId($allFilms['id']);
+            $avisObject->setCategorie($allFilms['categorie_id']);
+            $avisObject->setTitre($allFilms['Titre']);
+            $avisObject->setDescription($allFilms['description']);
+            $avisObject->setDate($allFilms['date']);
+            $avisObject->setAuteur($allFilms['auteur']);
+            $avisObject->setDuree($allFilms['duree']);
+            $avisObject->setAffiche($allFilms['affiche'] ?? "images/vide.png");
+            $avisObject->setLienfiche($allFilms['lien_film']);
+            $tab[] = $avisObject;
+        }
+        return $tab ?? [];
+
+        return $query->execute();
     }
 
     public function supprimer(int $id){

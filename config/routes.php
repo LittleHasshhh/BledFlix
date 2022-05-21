@@ -1,7 +1,6 @@
 <?php
 
 require_once '../src/controller/usersControls.php';
-require_once '../src/controller/cateControls.php';
 require_once '../src/controller/errorControls.php';
 require_once '../src/controller/adminControls.php';
 
@@ -34,6 +33,10 @@ switch ($uri) {
     case "/edite":
         $controller = new adminControls();
         $controller->edit();
+        break;
+    case "/categorie":
+        $controller = new usersControls();
+        $controller->oneCategorie();
         break;
     default:
         $controller = new errorControls();
