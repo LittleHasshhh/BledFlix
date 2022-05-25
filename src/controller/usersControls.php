@@ -114,9 +114,12 @@ class usersControls {
         $allAvis = new cateRepo();
         $list = $allAvis->allCategorie();
 
-        $allFilms = $allAvis->oneForAll(htmlspecialchars(strip_tags($_GET['id'])));
+        $pb = htmlspecialchars(strip_tags($_GET['id']));
 
-        var_dump($allFilms);
+        $allFilm = new cateRepo();
+        $allFilms = $allFilm->oneForAll($pb);
+        
+        $div = 0;
 
         if (isset($_SESSION['user']) && $_SESSION['user']['role'] !== "ROLE_ADMIN") {
             $admin = "<li><a class='dropdown-item' href='#'>Centre d'aide</a></li>";

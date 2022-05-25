@@ -1,7 +1,7 @@
 <?php
 
 require_once 'db.php';
-require_once __DIR__ . '../../Entity/category.php';
+require_once __DIR__ . '../../Entity/categorie.php';
 require_once __DIR__ . '../../Entity/film.php';
 
 class cateRepo extends Db
@@ -57,12 +57,13 @@ class cateRepo extends Db
     {
         $query = $this->getDb()->prepare('SELECT * FROM film WHERE categorie_id = :id');
         $query->bindValue(':id', $id, PDO::PARAM_INT);
-
+        $query->execute();
         $all = $query->fetchAll();
+        
 
         foreach ($all as $allFilms) {
 
-            $avisObject = new category();
+            $avisObject = new film();
             $avisObject->setId($allFilms['id']);
             $avisObject->setCategorie($allFilms['categorie_id']);
             $avisObject->setTitre($allFilms['Titre']);
@@ -76,7 +77,6 @@ class cateRepo extends Db
         }
         return $tab ?? [];
 
-        return $query->execute();
     }
 
     public function supprimer(int $id){

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'../../Entity/category.php';
+require_once __DIR__.'../../Entity/categorie.php';
 require_once __DIR__.'../../repository/cateRepo.php';
 class adminControls {
 

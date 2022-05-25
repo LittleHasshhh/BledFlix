@@ -16,48 +16,8 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     
-  }
-video {
-    position: relative !important;
 }
-.title {
-    position: absolute !important;
-    top: 350px !important;
-    left: 100px !important;
-    color: whitesmoke;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-}
-.lien1 {
-    padding: 5px 15px !important;
-    background-color: whitesmoke !important;
-    border-radius: 8px !important;
-    color: #000 ;
-    font-weight: 700;
-    font-size: 18px;
-}
-.lien2{
-    padding: 5px 15px !important;
-    background-color: rgba(128, 128, 128, 0.662) !important;
-    border-radius: 8px !important;
-    color: whitesmoke ;
-    font-weight: 700;
-    font-size: 18px;
-}
-.titleA{
-    display: flex !important;
-    gap: 30px !important;
-    text-align: center !important;
-    margin-left: 10px;
-}
-.title h2 {
-    font-size: 30px !important;
-}
-.title a {
-    text-decoration: none;
-    font-size: 20px;
-}
+
 .flex{
     display: flex !important; 
     align-items: baseline;
@@ -65,6 +25,7 @@ video {
 main{
     width: 90% !important;
     margin: auto !important;
+    padding-top: 150px !important;
   }
 .space{
     width: 30% !important; 
@@ -181,6 +142,14 @@ h1 {
     width: 220px !important;
     margin: 0 !important;
 }
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 100px;
+}
+    
 
 @media only screen and (max-width: 600px) {
     a.arrow__btn {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bledflix</title>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/categorie.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -56,27 +56,23 @@
                 </ul>
             </div>
         </nav>
-         <!-- HEADER -->
-        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-            <source src="images/bande_annonce.mov">
-            <div>
-                <h2>Titre du film</h2>
-                <a href="#"><img src="images/play.svg" alt="play">Lecture</a>
-                <a href="#">Plus d'info</a>
-            </div>
-        </video>
     </header>
-
-    <!-- Carrousel -->
     <main>
-    <?php 
-            foreach ($allFilms as $key) {
-                echo "<p>{$key}</p>";
-            }
-        ?>
+        <section class="wrap">
+                <?php 
+                    foreach ($allFilms as $key) {
+                            $div += 1;
+                        echo "
+                        <div class='filmdiv}>
+                            <p>{$key->getTitre()}</p>
+                            <p>{$key->getDescription()}</p>
+                            <p>{$key->getDate()}</p>
+                        </div>";    
+                    }
+                ?>
+        </section>
+        
     </main>
-
-</body>
 </body>
 
 </html>
