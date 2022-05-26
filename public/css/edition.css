@@ -1,0 +1,107 @@
+.lien{
+    display: flex!important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    padding-top: 10px !important;
+    background-color: #000 !important;
+    position: fixed !important;
+    width: 100vw;
+    z-index: 90000000;
+
+}
+
+.flex{
+    display: flex !important; 
+    align-items: baseline;
+}
+
+.space{
+    width: 30% !important; 
+    margin-left: 100px !important;
+}
+
+.navbar-brand {
+    margin-left: 50px !important;
+}
+
+.compte {
+    margin-left: 600px;
+}
+nav img{
+    width: 150px;
+    margin-left: 40px;
+}
+
+input{
+    height: 35px;
+    background-color: lightgray !important;
+}
+
+span{
+    height: 35px;
+}
+/**
+* bande annonce + carousel
+*/
+
+/**
+* HEADER
+*/
+
+header h1 {
+    color: white;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(29, 29, 29) !important;
+}
+
+h1 {
+    font-family: Arial;
+    color: white !important;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+
+h3 {
+    color: white !important;
+}
+.container {
+    margin-top: 0 !important;
+    padding: 100px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+form{
+    background-color: rgba(5, 5, 5, 0.8);
+    width: 100vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 10px;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 150px;
+  }
+
+
+
+  

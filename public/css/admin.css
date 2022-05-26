@@ -1,0 +1,193 @@
+.lien{
+    display: flex!important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    padding-top: 10px !important;
+    background-color: #000 !important;
+    position: fixed !important;
+    width: 100vw;
+    z-index: 90000000;
+
+}
+
+.flex{
+    display: flex !important; 
+    align-items: baseline;
+}
+
+.space{
+    width: 30% !important; 
+    margin-left: 100px !important;
+}
+
+.navbar-brand {
+    margin-left: 50px !important;
+}
+
+.compte {
+    margin-left: 600px;
+}
+nav img{
+    width: 150px;
+    margin-left: 40px;
+}
+
+input{
+    height: 35px;
+    background-color: lightgray !important;
+}
+
+span{
+    height: 35px;
+}
+/**
+* bande annonce + carousel
+*/
+
+/**
+* HEADER
+*/
+
+video {
+    width: 100%;
+}
+
+
+header h2 {
+    color: white;
+}
+
+/**
+* Carousel
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(29, 29, 29) !important;
+}
+
+h1 {
+    font-family: Arial;
+    color: white !important;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+}
+
+.wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+}
+
+.wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+}
+
+.wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+main {
+    padding-top: 200px !important;
+    color: whitesmoke !important;
+    width: 70% !important;
+    margin: auto !important;
+    margin-bottom: 100px!important;
+}
+.imgFilm{
+    height: 150px !important;
+    width: 150px;
+}
+td {
+    margin-bottom: 20px !important;
+}
+tr {
+    padding: 20px !important;
+    background-color: #000 !important;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+table, thead, tbody, tr {
+    text-align: center !important;
+}
+.id {
+    padding: 0px 10px 0 10px !important;
+}
+.flex {
+    display: flex !important;
+    gap: 10px !important;
+}
+.href{
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+tbody tr {
+    margin-bottom: 120px !important;
+}
+.logo {
+    height: 50px !important;
+    width: 220px !important;
+    margin: 0 !important;
+}
+.edit {
+    padding: 5px 10px !important;
+    border: 1px solid rgb(0, 150, 0) !important;
+    border-radius: 5px !important;
+}
+.sup {
+    padding: 5px 10px !important;
+    border: 1px solid red !important;
+    border-radius: 5px !important;
+}
+.date {
+    width: 120px !important;
+}
+.flexible {
+    display: flex !important;
+    align-items: center;
+    gap: 20px !important;
+    
+}
+@media only screen and (max-width: 600px) {
+    a.arrow__btn {
+        display: none;
+    }
+}

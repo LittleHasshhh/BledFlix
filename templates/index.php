@@ -7,38 +7,41 @@
     <title>BledFlix</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="css/homeStyle.css">
+    
 </head>
 <body class="homePage">
     <header>
         <nav>
-            <a href="index.php">
-            <img src="images/netflixLogo.png" alt="Logo Netflix">
+            <a href="/">
+                <img src="images/bledflix.png" alt="Logo Netflix" class="logo">
             </a>
         </nav>
     </header>
     <div class="tqt">
-        <form action="">
+        <form action="" method="POST">
             <h2>S'identifier</h2>
-            <input type="email" placeholder="Adresse mail">
-            <input type="password" placeholder="Mot de passe">
+            <input type="email" name="email" placeholder="Adresse mail">
+            <input type="password" name="password" placeholder="Mot de passe">
             <input type="submit" value="Connexion">
-            <div class="miguel">
+            <div class="lien">
                 <input type="checkbox" id="save">
                 <label for="save">Se souvenir de moi</label>
-                <a class="aide" href="#">Besoin d'aide ?</a>
             </div>
-            <div class="miguel">
-                <a class="none" href="">
+            <?php
+            if ($error) {
+                echo $error;
+            }
+            ?>
+            <div>
+                <a class="none lien" href="" >
                     <img class="imgFB" src="images/téléchargement.png" alt="FaceBook connexion">
                     <p>S'identifier avec Facebook</p>
                 </a>
             </div>
-            <p class="gray">Premiere visite sur Netflix ? <a class="ins" href="#">Inscrivez-vous</a></p>
+            <p class="gray">Premiere visite sur Netflix ? <a class="ins" href="create">Inscrivez-vous</a></p>
             <p class="gray2">Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n'êtes pas un robot.</p>
         </form>
     </div>
-    ouiouiy
-    zozoz
 </body>
 </html>
