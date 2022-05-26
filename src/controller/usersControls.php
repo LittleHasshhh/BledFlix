@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db.php';
+require_once 'dataBase.php';
 require_once __DIR__.'../../Entity/users.php';
 
 class usersControls {

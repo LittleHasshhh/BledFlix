@@ -4,4 +4,6 @@
 namespace Entity;
 
 
-clas
+class users {
+    
+}
