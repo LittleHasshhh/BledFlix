@@ -1,6 +1,6 @@
 <?php
 
-require_once 'dataBase.php';
+require_once __DIR__.'../../repository/dataBase.php';
 require_once __DIR__.'../../repository/usersRepo.php';
 require_once __DIR__.'../../Entity/users.php';
 require_once __DIR__.'../../Entity/film.php';

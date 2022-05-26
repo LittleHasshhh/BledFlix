@@ -12,11 +12,6 @@ class user {
         return $this->role;
     }
 
-<<<<<<< HEAD
-class users {
-    
-}
-=======
     public function setRole($role){
         $this->role = $role;
         return $this;
@@ -67,4 +62,3 @@ class users {
         return $this;
     }
 }
->>>>>>> bd66a95481a3267fbe1ea9192048aa40882910da
