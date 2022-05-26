@@ -37,10 +37,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="input-group mb-3 space">
-                <span class="input-group-text" id="inputGroup-sizing-default">Recherche</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
+            <form method="post">
+                <div class="input-group mb-3 space">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Recherche</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <button></button>
+                </div>
+            </form>
             <div class="collapse navbar-collapse compte " id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
@@ -52,6 +55,7 @@
                             <?php echo $admin;?>
                             <li><a class="dropdown-item" href="/logOut">Deconnecté</a></li>
                         </ul>
+                        
                     </li>
                 </ul>
             </div>
@@ -63,10 +67,10 @@
                     foreach ($allFilms as $key) {
                             $div += 1;
                         echo "
-                        <div class='filmdiv}>
-                            <p>{$key->getTitre()}</p>
-                            <p>{$key->getDescription()}</p>
-                            <p>{$key->getDate()}</p>
+                        <div class='filmdiv'}>
+                            <div class='imgDiv'>
+                                <img class='imgFilm' src='{$key->getAffiche()}' alt='{$key->getTitre()}'>
+                            </div>
                         </div>";    
                     }
                 ?>

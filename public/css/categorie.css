@@ -149,7 +149,14 @@ h1 {
     grid-column-gap: 50px;
     grid-row-gap: 100px;
 }
-    
+.imgFilm {
+    width: 200px !important;
+    transition: 250ms all;
+}
+.imgFilm:hover {
+    width: 250px !important;
+    transition: 250ms all;
+}
 
 @media only screen and (max-width: 600px) {
     a.arrow__btn {
