@@ -37,10 +37,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="input-group mb-3 space">
-                <span class="input-group-text" id="inputGroup-sizing-default">Recherche</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
+            <form action="search" method="get">
+                <label for="search">Recherche</label>
+                <input type="text" name="search" id="search">
+                <button></button>
+            </form>
             <div class="collapse navbar-collapse compte " id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">

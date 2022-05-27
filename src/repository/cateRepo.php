@@ -85,4 +85,30 @@ class cateRepo extends Db
 
         return $query->execute();
     }
+
+    public function search(string $name)
+    {
+        $query = $this->getDb()->prepare('SELECT * FROM film WHERE titre = :name');
+        $query->bindValue(':name', $name);
+        $query->execute();
+        $all = $query->fetchAll();
+        
+
+        foreach ($all as $allFilms) {
+
+            $avisObject = new film();
+            $avisObject->setId($allFilms['id']);
+            $avisObject->setCategorie($allFilms['categorie_id']);
+            $avisObject->setTitre($allFilms['Titre']);
+            $avisObject->setDescription($allFilms['description']);
+            $avisObject->setDate($allFilms['date']);
+            $avisObject->setAuteur($allFilms['auteur']);
+            $avisObject->setDuree($allFilms['duree']);
+            $avisObject->setAffiche($allFilms['affiche'] ?? "images/vide.png");
+            $avisObject->setLienfiche($allFilms['lien_film']);
+            $tab[] = $avisObject;
+        }
+        return $tab ?? [];
+
+    }
 }

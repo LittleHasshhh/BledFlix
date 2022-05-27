@@ -38,6 +38,10 @@ switch ($uri) {
         $controller = new usersControls();
         $controller->oneCategorie();
         break;
+    case "/search":
+        $controller = new usersControls();
+        $controller->searchFilm();
+        break;
     default:
         $controller = new errorControls();
         $controller->error404();
