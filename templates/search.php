@@ -62,7 +62,7 @@
     <main>
         <section class="wrap">
                 <?php 
-                    foreach ($allFilms as $key) {
+                    foreach ($success as $key) {
                         echo "
                         <div class='filmdiv'}>
                             <div class='imgDiv'>

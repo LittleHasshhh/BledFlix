@@ -37,7 +37,7 @@ main{
 }
 
 .compte {
-    margin-left: 550px;
+    margin-left: 500px;
 }
 nav img{
     width: 150px;
@@ -158,8 +158,29 @@ h1 {
     transition: 250ms all;
 }
 
-@media only screen and (max-width: 600px) {
-    a.arrow__btn {
-        display: none;
-    }
+form {
+    margin-left: 120px;
+}
+input {
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgb(70, 70, 70) !important;
+    outline: none;
+    border: none;
+    border-left: 1px solid #323232;
+    padding-left: 5px;
+    color: #c2c2c2;
+}  
+label {
+    background-color: rgb(70, 70, 70);
+    padding: 5px 10px 3px 10px;
+    margin-right: -5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #c2c2c2;
+    font-size: 15px;
+}
+form button {
+    display: none;
 }

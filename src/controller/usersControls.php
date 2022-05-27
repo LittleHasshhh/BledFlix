@@ -148,7 +148,10 @@ class usersControls {
         if (!empty($_GET)) {
             $pb = htmlspecialchars(strip_tags($_GET['search']));
             $allFilm = new cateRepo();
-            $allFilms = $allFilm->search($pb);
+            $success = $allFilm->search($pb);
+            if (!$success) {
+                header('Location: /404');
+            }
 
         }else {
             header('Location: /404');
