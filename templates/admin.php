@@ -39,8 +39,8 @@
                                 <td class='date'>{$key->getDate()}</td>
                                 <td class='id'>
                                     <div class='flex'>
-                                        <a href='edite' class='href edit'>Editer</a>
-                                        <a href='sup?id={$key->getId()}' class='href sup'>supprimer</a>
+                                        <a href='/edite?id={$key->getId()}' class='href edit'>Editer</a>
+                                        <a href='/sup?id={$key->getId()}' class='href sup'>supprimer</a>
                                     </div>
                                 </td>
                               </tr>";

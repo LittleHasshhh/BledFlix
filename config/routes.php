@@ -42,6 +42,10 @@ switch ($uri) {
         $controller = new usersControls();
         $controller->searchFilm();
         break;
+    case "/sup":
+        $controller = new adminControls();
+        $controller->sup();
+        break;
     default:
         $controller = new errorControls();
         $controller->error404();

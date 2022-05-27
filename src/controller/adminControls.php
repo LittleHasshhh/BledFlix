@@ -16,6 +16,10 @@ class adminControls {
         $supAvis = new cateRepo();
         $success = $supAvis->supprimer(htmlspecialchars(strip_tags($_GET['id'])));
         header('Location: /admin?delete='. $success);
+
+        require_once __DIR__. '../../../templates/sup.php';
+        
+
     }
 
     public function add() {
