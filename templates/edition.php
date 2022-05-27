@@ -27,32 +27,37 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <h1>Edition</h1>
-            <form action="" method="post">
-                <label for="">Titre</label>
-                <input type="text">
-                <label for="">Auteur</label>
-                <input type="text">
-                <label for="">Durée</label>
-                <input type="text">
-                <label for="">Date</label>
-                <input type="date">
-                <label for="">Catégorie</label>
-                <select name="" id="">
-                    <?php foreach ($list AS $cates) : ?>
-                        <option value=""><?php echo $cates->getNom(); ?></option>
-                    <?php endforeach;?>
-                </select>
-                <label for="">Affiche</label>
-                <input type="text">
-                <label for="">Film</label>
-                <input type="text">
-                <label for="">Description</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button type="submit">Valider</button>
-            </form>
-        </div>
+        <h1>Edition</h1>
+        <form action="" method="post">
+            <div class="flex1">
+                <div class="flex2">
+                    <label for="title">Titre</label>
+                    <input type="text" name="title" id="title" value="<?php echo $success['Titre'];?>">
+                    <label for="auteur">Auteur</label>
+                    <input type="text" name="auteur" id="auteur" value="<?php echo $success['auteur'];?>">
+                    <label for="time">Durée</label>
+                    <input type="text" name="time" id="time" value="<?php echo $success['duree'];?>">
+                    <label for="date">Date</label>
+                    <input type="text" name="date" id="date" value="<?php echo $success['date'];?>">
+                </div>
+                <div class="flex3">
+                    <label for="cate">Catégorie</label>
+                    <select name="cate" id="cate">
+                        <option value="<?php echo $success['categorie_id'];?>"><?php echo $success['nom'];?></option>
+                        <?php foreach ($list AS $cates) : ?>
+                            <option value="<?php echo $cates->getId();?>"><?php echo $cates->getNom();?></option>
+                        <?php endforeach;?>
+                    </select>
+                    <label for="img">Affiche</label>
+                    <input type="text" name="img" id="img" value="<?php echo $success['affiche'];?>">
+                    <label for="lienF">Film</label>
+                    <input type="text" name="lienF" id="lienF" value="<?php echo $success['lien_film'];?>">
+                    <label for="desc">Description</label>
+                    <textarea name="desc" id="desc" cols="30" rows="5"><?php echo $success['description'];?></textarea>
+                </div>
+            </div>
+            <button type="submit">Valider</button>
+        </form>
     </main>
 </body>
 

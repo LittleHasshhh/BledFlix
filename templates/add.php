@@ -30,7 +30,6 @@
                     <img src="images/bledflix.png" alt="Logo Netflix">
                 </a>
                 <a class="navbar-brand " href="/main">acceuil</a>
-                <a class="navbar-brand " href="/edite">editer un film</a>
                 <a class="navbar-brand " href="/admin">Liste films</a>
             </div>
         </nav>

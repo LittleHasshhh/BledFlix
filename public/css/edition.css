@@ -73,35 +73,42 @@ h1 {
 h3 {
     color: white !important;
 }
-.container {
-    margin-top: 0 !important;
-    padding: 100px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-}
 
 form{
     background-color: rgba(5, 5, 5, 0.8);
-    width: 100vh;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    margin-top: 90px;
     padding: 20px;
-    gap: 10px;
     color: #fff;
     border-radius: 10px;
-  }
+}
+input {
+    margin-bottom: 10px !important;
+}
+input, textarea, select {
+    border-radius: 5px;
+}
 
-  .container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 150px;
-  }
-
-
-
+.flex1{
+    display: flex !important;
+    gap: 30px;
+}
+.flex2{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 50%;
+    gap: 10px;
+}
+.flex3{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 50%;
+    gap: 10px;
+}
+button {
+    margin-top: 20px !important;
+    width: 100%;
+    border-radius: 7px !important;
+}
   

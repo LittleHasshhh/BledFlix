@@ -46,10 +46,13 @@ class cateRepo extends Db
 
     public function editfilm(int $id)
     {
-        $query = $this->getDb()->prepare('SELECT id, Titre, description, date, auteur, duree, auteur, affiche, lien_film FROM film WHERE id = :id');
+        $query = $this->getDb()->prepare('SELECT film.id, film.Titre, film.description, film.date, film.auteur, film.duree, film.auteur, film.affiche, film.lien_film, film.categorie_id, categorie.nom FROM film INNER JOIN categorie ON film.categorie_id = categorie.id WHERE film.id = :id');
         $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+        
+        return $all = $query->fetch();
 
-        return $query->execute();
+
 
     }
 
@@ -110,5 +113,20 @@ class cateRepo extends Db
         }
         return $tab ?? [];
 
+    }
+    
+    public function editBdd(int $id, string $title, string $autor, string $time, string $date, int $cateId, string $img, string $video, string $desc){
+        $query = $this->getDb()->prepare('UPDATE film SET Titre = :title, description = :descr, date = :datex, auteur = :autor, duree = :time, affiche = :img, lien_film = :video, categorie_id  = :cateId WHERE id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->bindValue(':title', $title);
+        $query->bindValue(':descr', $desc);
+        $query->bindValue(':datex', $date);
+        $query->bindValue(':autor', $autor);
+        $query->bindValue(':time', $time);
+        $query->bindValue(':img', $img);
+        $query->bindValue(':video', $video);
+        $query->bindValue(':cateId', $cateId, PDO::PARAM_INT);
+
+        return $query->execute();
     }
 }

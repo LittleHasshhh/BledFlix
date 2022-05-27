@@ -13,49 +13,20 @@ class film {
     private string $affiche = "images/vide.png";
     private string $lienfiche;
 
-    /**
-     * Get the value of id
-     */ 
-    public function getId()
-    {
+    public function getId(){
         return $this->id;
     }
 
-    /**
-     * Set the value of id
-     *
-     * @return  self
-     */ 
-    public function setId(int $id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of categorie
-     */ 
-    public function getCategorie()
-    {
+    public function getCategorie(){
         return $this->categorie;
     }
 
-    /**
-     * Set the value of categorie
-     *
-     * @return  self
-     */ 
-    public function setCategorie(int $categorie)
-    {
+    public function setCategorie(int $categorie){
         $this->categorie = $categorie;
 
         return $this;
     }
 
-    /**
-     * Get the value of Titre
-     */ 
     public function getTitre()
     {
         return $this->Titre;
@@ -189,6 +160,18 @@ class film {
     public function setLienfiche(string $lienfiche)
     {
         $this->lienfiche = $lienfiche;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
 
         return $this;
     }
