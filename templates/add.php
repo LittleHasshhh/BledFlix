@@ -6,20 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bledflix</title>
-    <link rel="stylesheet" href="css/adminAdd.css">
+    <link rel="stylesheet" href="css/edition.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -27,94 +18,47 @@
         <nav class="navbar navbar-expand-lg navbar-dark lien">
             <div class="flex ">
                 <a href="/main">
-                    <img src="images/bledflix.png" alt="Logo Netflix">
+                    <img src="images/bledflix.png" alt="Logo bledflix" class="logo">
                 </a>
-                <a class="navbar-brand " href="/main">acceuil</a>
+                <a class="navbar-brand " href="/main">Acceuil</a>
                 <a class="navbar-brand " href="/admin">Liste films</a>
             </div>
         </nav>
     </header>
     <main>
-        <div class="background">
-            <form class="was-validated">
-
-
-                <div class="form-check mb-3">
-
-
-
-                    <div class="input-group mb-3">
-
-
-
-                        <div class="mb-3">
-
-                            <span class="input-group-text" id="inputGroup-sizing-default">Titre</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-
-                        <div class="mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">date</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-
-                        <div class="mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">duree</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-
-                        <div class="mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">affiche</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-
-                        <div class="mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">auteur</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-
-                        
-                        <div class="mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">categorie</span>
-                            <select class="form-select" required aria-label="select example">
-                        </div>
-
-                        <option value="1">...</option>
-                        <option value="1">comedie</option>
-                        <option value="2">Action</option>
-                        <option value="3">Policier</option>
-                        <option value="3">science fiction</option>
-                        <option value="3">Documentaire</option>
-                        <option value="3">emotion</option>
-                        <option value="3">drame</option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">lien du film</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-
-                    <div class="mb-2">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                        </div>
-
-
-
-                        <div class="mb-3">
-                            <button class="btn btn-primary" type="submit" disabled>Envoyer</button>
-                        </div>
-            </form>
-
-
-        </div>
+        <h1>Edition</h1>
+        <form action="" method="post">
+            <div class="flex1">
+                <div class="flex2">
+                    <label for="title">Titre</label>
+                    <input type="text" name="title" id="title">
+                    <label for="auteur">Auteur</label>
+                    <input type="text" name="auteur" id="auteur">
+                    <label for="time">Durée</label>
+                    <input type="text" name="time" id="time">
+                    <label for="date">Date</label>
+                    <input type="text" name="date" id="date">
+                </div>
+                <div class="flex3">
+                    <label for="cate">Catégorie</label>
+                    <select name="cate" id="cate">
+                        <option value=""></option>
+                        <?php foreach ($list AS $cates) : ?>
+                            <option value="<?php echo $cates->getId();?>"><?php echo $cates->getNom();?></option>
+                        <?php endforeach;?>
+                    </select>
+                    <label for="img">Affiche</label>
+                    <input type="text" name="img" id="img">
+                    <label for="lienF">Film</label>
+                    <input type="text" name="lienF" id="lienF">
+                    <label for="desc">Description</label>
+                    <textarea name="desc" id="desc" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <button type="submit">Valider</button>
+        </form>
     </main>
 </body>
-</body>
+
 
 </html>

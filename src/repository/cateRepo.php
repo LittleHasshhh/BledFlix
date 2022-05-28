@@ -129,4 +129,18 @@ class cateRepo extends Db
 
         return $query->execute();
     }
+
+    public function addBdd(string $title, string $autor, string $time, string $date, int $cateId, string $img, string $video, string $desc){
+        $query = $this->getDb()->prepare('INSERT INTO film  (Titre, description, date, auteur, duree, affiche, lien_film, categorie_id) VALUES (:title, :descr, :datex, :autor, :time, :img, :video, :cateId)');
+        $query->bindValue(':title', $title);
+        $query->bindValue(':descr', $desc);
+        $query->bindValue(':datex', $date);
+        $query->bindValue(':autor', $autor);
+        $query->bindValue(':time', $time);
+        $query->bindValue(':img', $img);
+        $query->bindValue(':video', $video);
+        $query->bindValue(':cateId', $cateId, PDO::PARAM_INT);
+
+        return $query->execute();
+    }
 }

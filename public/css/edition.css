@@ -111,4 +111,8 @@ button {
     width: 100%;
     border-radius: 7px !important;
 }
-  
+.logo {
+    height: 50px !important;
+    width: 220px !important;
+    margin: 0 !important;
+}
