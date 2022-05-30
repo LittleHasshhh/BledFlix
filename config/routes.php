@@ -3,6 +3,7 @@
 require_once '../src/controller/usersControls.php';
 require_once '../src/controller/errorControls.php';
 require_once '../src/controller/adminControls.php';
+require_once '../src/controller/accountControls.php';
 
 
 switch ($uri) {
@@ -45,6 +46,14 @@ switch ($uri) {
     case "/sup":
         $controller = new adminControls();
         $controller->sup();
+        break;
+    case "/account":
+        $controller = new accountControls();
+        $controller->accountPage();
+        break;
+    case "/accountUpdate":
+        $controller = new accountControls();
+        $controller->accountUpdate();
         break;
     default:
         $controller = new errorControls();

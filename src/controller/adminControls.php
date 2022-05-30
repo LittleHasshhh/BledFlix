@@ -43,7 +43,7 @@ class adminControls {
             if (isset($_POST)) {
                 if (!empty($_POST)) {
                     foreach ($_POST as $key => $value) {
-                        echo htmlspecialchars(strip_tags($_POST[$key]));
+                        htmlspecialchars(strip_tags($_POST[$key]));
                     }
                     $edit = new cateRepo();
                     $successEdit = $edit->editBdd($pb, $_POST['title'], $_POST['auteur'], $_POST['time'], $_POST['date'], $_POST['cate'], $_POST['img'], $_POST['lienF'], $_POST['desc']);

@@ -49,7 +49,7 @@
                         <?php echo $admin2;?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Compte</a></li>
+                            <li><a class="dropdown-item" href="/account">Compte</a></li>
                             <?php echo $admin;?>
                             <li><a class="dropdown-item" href="/logOut">Deconnecté</a></li>
                         </ul>
@@ -73,11 +73,13 @@
     <!-- Carrousel -->
     <main>
         <div>
+            <?php $test = 0; ?>
             <?php foreach ($list AS $cates) : ?>
                 <h1><?php echo $cates->getNom(); ?></h1>
+                <?php $test +=1; ?>
                 <div class="wrapper">
-                    <section id="section1">
-                        <a href="#section3" class="arrow__btn">‹</a>
+                    <section id="section1<?php echo $test ;?>">
+                        <a href="#section3<?php echo $test ;?>" class="arrow__btn">‹</a>
                         <div class="item">
                             <img src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp">
                         </div>
@@ -93,10 +95,10 @@
                         <div class="item">
                             <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABbcCX42tsqGbBvO2y9CQv5-7QvYbCfoHtXsuc6NPCtZaKa4l4fBX3XWvUwG9F2A3CTsNpHVmulxBbdXKwK8Q6xGjejd9FoadGkZ7CnGrSl601TOQjzSHJ23NuIPC8j0QMGORL4uRIA.jpg">
                         </div>
-                        <a href="#section2" class="arrow__btn">›</a>
+                        <a href="#section2<?php echo $test ;?>" class="arrow__btn">›</a>
                     </section>
-                    <section id="section2">
-                        <a href="#section1" class="arrow__btn">‹</a>
+                    <section id="section2<?php echo $test ;?>">
+                        <a href="#section1<?php echo $test ;?>" class="arrow__btn">‹</a>
                         <div class="item">
                             <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABVopDZ5Fy9_fk_HO5WxHTXKKjKhtWFupbSjuvPwfLK_vytzon4EwRUdGgYJ34JwPxOTK_NkV3aXfkULMB0Dcct-FyfqzH-X44VXuRMp4QeBHlvKwWeZFpZlGdItPzmmg4scmwhG7SQ.jpg">
                         </div>
@@ -112,10 +114,10 @@
                         <div class="item">
                             <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABbXWODpAWqVXcmmjMA7K-2mPkQpvwCLfSdeyhVXzR8A3MSpdSEnnjf4HEJJTYC-TnktU6njTUGAxmzWEYCaJbk4v_ZeL-7QGzmkvYBjg_N-evr2XmcX-Fanoyvu_nimFP4iigPe4O3Vr_WcgplhwkDrJwPUJa84wRLrNAx3TufN5V7cWRP4indqu5HQahvgFEqfL9zjp4g.jpg">
                         </div>
-                        <a href="#section3" class="arrow__btn">›</a>
+                        <a href="#section3<?php echo $test ;?>" class="arrow__btn">›</a>
                     </section>
-                    <section id="section3">
-                        <a href="#section2" class="arrow__btn">‹</a>
+                    <section id="section3<?php echo $test ;?>">
+                        <a href="#section2<?php echo $test ;?>" class="arrow__btn">‹</a>
                         <div class="item">
                             <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRr4YxdaABuAuH_3FmSQZn7BCvLp-UUPsXE9MiYpvFP3CSUHV2zOew5oVqKqqdaOd3tbFVS0Uf67uIs7_eZydlCghg4nK0nMatRpPImABwTOhnNzCLCxdKrua7pPIcPCZqBYTeAO5g.jpg">
                         </div>
@@ -131,7 +133,7 @@
                         <div class="item">
                             <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg">
                         </div>
-                        <a href="#section1" class="arrow__btn">›</a>
+                        <a href="#section1<?php echo $test ;?>" class="arrow__btn">›</a>
                     </section>
                 </div>
             <?php endforeach; ?>

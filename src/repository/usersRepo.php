@@ -27,6 +27,25 @@ class usersRepo extends Db {
             die("error on insertion {$exe->getMessage()}");
         }
         return $this->getDb()->lastInsertId();
+    }   
+
+    public function update(int $id, string $pass, string $mail, string $nom, string $prenom) {
+        $query = $this->getDb()->prepare('UPDATE utilisateur SET prenom = :prenom, nom = :nom, mail = :mail, password = :password WHERE id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->bindValue(':prenom', $prenom);
+        $query->bindValue(':nom', $nom);
+        $query->bindValue(':mail', $mail);
+        $query->bindValue(':password', $pass);
+
+        return $query->execute();
+    }
+
+    public function selectUser(int $id){
+        $query = $this->getDb()->prepare('SELECT * FROM utilisateur WHERE id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+
+        return $all = $query->fetch();
     }
 
 }
