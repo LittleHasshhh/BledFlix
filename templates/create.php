@@ -13,7 +13,7 @@
     <header>
         <nav>
             <a href="index.php">
-            <img src="images/netflixLogo.png" alt="Logo Netflix">
+            <img src="images/bledflix.png" alt="Logo Netflix">
             </a>
         </nav>
     </header>

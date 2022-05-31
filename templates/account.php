@@ -37,7 +37,10 @@
         </nav>
     </header>
     <main>
-       
+        <section>
+            <h1>Compte</h1>
+            
+        </section>
     </main>
 </body>
 </body>
