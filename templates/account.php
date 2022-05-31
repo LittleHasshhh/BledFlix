@@ -37,24 +37,7 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Modification du compte</h1>
-            <div class="accountForm">
-                <form method="post">
-                    <label for="prenom">Prenom</label>
-                    <input type="text" name="prenom" id="prenom">
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" id="prenom">
-                    <label for="mail">Adresse Mail</label>
-                    <input type="text" name="mail" id="mail">
-                    <label for="passw">Mot de Passe</label>
-                    <input type="password" name="passw" id="passw">
-                    <label for="prenom">Comfirmez le Mot de passe</label>
-                    <input type="password" name="prenom" id="prenom">
-                    <button>Valider les changements</button>
-                </form>
-            </div>
-        </section>
+       
     </main>
 </body>
 </body>

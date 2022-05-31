@@ -218,3 +218,17 @@ button {
     border-radius: 5px !important;
     margin-top: 20px !important;
 }
+.title {
+    display: flex;
+    gap: 450px;
+    align-items: baseline;
+}
+.title a {
+    text-decoration: none;
+    color: #000;
+}
+.title img {
+    width: 40px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
