@@ -26,10 +26,6 @@ main{
     width: 90% !important;
     margin: auto !important;
     padding-top: 150px !important;
-  }
-.space{
-    width: 30% !important; 
-    margin-left: 100px !important;
 }
 
 .navbar-brand {
@@ -44,99 +40,13 @@ nav img{
     margin-left: 40px;
 }
 
-input{
-    height: 35px;
-    background-color: lightgray !important;
-}
-
-span{
-    height: 35px;
-}
-/**
-* bande annonce + carousel
-*/
-
-/**
-* HEADER
-*/
-
-video {
-    width: 100%;
-}
-
-
-header h2 {
-    color: white;
-}
-
-/**
-* Carousel
-*/
-
-html {
-    scroll-behavior: smooth;
-}
 
 body {
-    margin: 0;
     background-color: #000 !important;
 }
 
-h1 {
-    font-family: Arial;
-    color: white !important;
-}
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 100%);
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
 
-.wrapper section {
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    margin: 20px 0;
-}
-
-.wrapper section .item {
-    padding: 0 2px;
-    transition: 250ms all;
-}
-
-.wrapper section .item:hover {
-    margin: 0 40px;
-    transform: scale(1.2);
-}
-
-.wrapper section a {
-    position: absolute;
-    color: #fff;
-    text-decoration: none;
-    font-size: 6em;
-    background: black;
-    width: 80px;
-    padding: 20px;
-    text-align: center;
-    z-index: 1;
-}
-
-.wrapper section a:nth-of-type(1) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
-}
-
-.wrapper section a:nth-of-type(2) {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
-}
 .logo {
     height: 50px !important;
     width: 220px !important;

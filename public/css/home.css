@@ -83,46 +83,20 @@ nav img{
     margin-left: 40px;
 }
 
-input{
-    height: 35px;
-    background-color: lightgray !important;
-}
-
-span{
-    height: 35px;
-}
-/**
-* bande annonce + carousel
-*/
-
-/**
-* HEADER
-*/
 
 video {
     width: 100%;
 }
 
 
-header h2 {
-    color: white;
-}
-
 /**
 * Carousel
 */
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
     background-color: #000 !important;
 }
 
-h1 {
-    font-family: Arial;
+.titleCat {
     color: white !important;
 }
 

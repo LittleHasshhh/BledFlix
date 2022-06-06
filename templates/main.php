@@ -75,7 +75,7 @@
         <div>
             <?php $test = 0; ?>
             <?php foreach ($list AS $cates) : ?>
-                <h1><?php echo $cates->getNom(); ?></h1>
+                <p class="titleCat"><?php echo $cates->getNom(); ?></p>
                 <?php $test +=1; ?>
                 <div class="wrapper">
                     <section id="section1<?php echo $test ;?>">

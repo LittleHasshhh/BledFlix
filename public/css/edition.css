@@ -15,64 +15,23 @@
     align-items: baseline;
 }
 
-.space{
-    width: 30% !important; 
-    margin-left: 100px !important;
-}
-
 .navbar-brand {
     margin-left: 50px !important;
 }
 
-.compte {
-    margin-left: 600px;
-}
 nav img{
     width: 150px;
     margin-left: 40px;
 }
 
-input{
-    height: 35px;
-    background-color: lightgray !important;
-}
-
-span{
-    height: 35px;
-}
-/**
-* bande annonce + carousel
-*/
-
-/**
-* HEADER
-*/
-
-header h1 {
-    color: white;
-}
-
 body {
-    margin: 0;
     background-color: rgb(29, 29, 29) !important;
 }
 
 h1 {
-    font-family: Arial;
     color: white !important;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 100%);
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-
-
-h3 {
-    color: white !important;
-}
 
 form{
     background-color: rgba(5, 5, 5, 0.8);
