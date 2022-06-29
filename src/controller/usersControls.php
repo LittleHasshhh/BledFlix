@@ -62,29 +62,36 @@ class usersControls {
                     $pass = htmlspecialchars(strip_tags($_POST['password']));
                     $nom = htmlspecialchars(strip_tags($_POST['nom']));
                     $prenom = htmlspecialchars(strip_tags($_POST['prenom']));
+                    
+                    $userRep = new usersRepo();
+                    $check = $userRep->checkUser($mail);
 
+                    
                     $pass = password_hash($pass, PASSWORD_ARGON2I);
 
-                    $user = new user();
-                    $user->setNom($nom);
-                    $user->setPrenom($prenom);
-                    $user->setPassword($pass);
-                    $user->setMail($mail);
+                    if(!$check) {
 
-                    $userRep = new usersRepo();
-
-                    $id = $userRep->createUser($user);
+                        $user = new user();
+                        $user->setNom($nom);
+                        $user->setPrenom($prenom);
+                        $user->setPassword($pass);
+                        $user->setMail($mail);
                     
+                        $id = $userRep->createUser($user);
+                        
 
-                    $_SESSION['user'] = [
-                        'id' => $id,
-                        'prenom' => $user->getPrenom(),
-                        'nom' => $user->getNom(),
-                        'email' => $user->getMail(),
-                        'role' => "ROLE_USER"
-                    ];
+                        $_SESSION['user'] = [
+                            'id' => $id,
+                            'prenom' => $user->getPrenom(),
+                            'nom' => $user->getNom(),
+                            'email' => $user->getMail(),
+                            'role' => "ROLE_USER"
+                        ];
 
-                    header('Location: /main');
+                        header('Location: /main');
+                    }else {
+                        $error = "Votre compte est deja existant";
+                    }
 
                 }else {
                     $error = "Les Mot de passe ne corespond pas ";

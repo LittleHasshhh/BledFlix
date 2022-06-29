@@ -5,13 +5,14 @@ require_once __DIR__.'../../Entity/users.php';
 
 class usersRepo extends Db {
 
-    public function checkUser(string $mail) {
+   public function checkUser(string $mail) {
         $query = $this->getDb()->prepare('SELECT * FROM utilisateur WHERE mail = :mail');
         $query->bindValue(':mail', $mail);
         $query->execute();
-    
+       
         return $query->fetch();
     }
+
 
     public function createUser(user $user) {
         try {
